@@ -11,6 +11,7 @@ import { ModalBody } from "@/components/ModalBody";
 import { AddBookMark } from "@/components/forms/AddBookmark";
 import { useState, useEffect } from "react";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { Gap } from "@/components/Gap";
 
 export default function HomeScreen() {
   const navigation = useNavigation();
@@ -67,6 +68,7 @@ export default function HomeScreen() {
   //shrc@selisegroup.com
   return (
     <Container>
+      <Gap size={100} />
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="subtitle">Bookmark Manager</ThemedText>
         <Button title="Add Bookmark" onPress={() => setBookmarkModal(true)} />
